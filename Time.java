@@ -2,7 +2,7 @@ package task2;
 
 public class Time {
     int sec; // переменная секунды
-    int hour; // переменная минуты
+    int hour; // переменная секунд в 1 часе
 
 
 int convertacia = sec /hour;
