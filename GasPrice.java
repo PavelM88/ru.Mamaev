@@ -1,11 +1,11 @@
-package task1;
+package task2;
 
 public class GasPrice {
-    int a = 43; // цена 1 литра бензина
-    int b = 50; // нужное количество бензина
+    int GasPrice = 43; // цена 1 литра бензина
+    int GasCount = 50; // нужное количество бензина
 
-  static int ymnozenie(int a, int b) {
-      return a*b;
+  static int ymnozenie(int GasPrice, int GasCount) {
+      return GasPrice*GasCount;
   }
 
     public static void main(String[] args) {

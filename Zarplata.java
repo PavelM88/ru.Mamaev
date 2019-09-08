@@ -1,4 +1,4 @@
-package task1;
+package task2;
 
 public  class Zarplata {
     static double zp = 70000;  // зарплата до вычета ндфл
