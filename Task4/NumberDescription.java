@@ -10,7 +10,7 @@ public class NumberDescription {
         if (scanNumber == 0) {
             System.out.println("Число нулевое");
         }
-        if (scanNumber > 0) {
+        if (scanNumber >= 0) {
             System.out.println("Число положительное");
         }
         else {
