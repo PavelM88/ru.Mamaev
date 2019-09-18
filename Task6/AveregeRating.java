@@ -1,9 +1,9 @@
 package Task6;
 
 public class AveregeRating {
-    int matematica;
-    int fizika;
-    int ekonomika;
+    private int matematica;
+    private int fizika;
+    private int ekonomika;
     AveregeRating (int matematica, int fizika,int ekonomika) {
         this.matematica = matematica;
         this.fizika = fizika;

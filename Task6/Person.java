@@ -2,10 +2,10 @@ package Task6;
 
 public class Person {
     private String name;
-   private String surname;
-    int age;
+    private String surname;
+    private int age;
     int courseNumber;
-    AveregeRating studentRating;
+    private AveregeRating studentRating;
     Person (String name, String surname, int age, int courseNumber, AveregeRating studentRating) {
         this.name = name;
         this.surname = surname;
