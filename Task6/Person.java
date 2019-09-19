@@ -4,12 +4,13 @@ public class Person {
     private String name;
     private String surname;
     private int age;
-    int courseNumber;
+    private int courseNumber;
     private AveregeRating studentRating;
     Person (String name, String surname, int age, int courseNumber, AveregeRating studentRating) {
         this.name = name;
         this.surname = surname;
         this.age = age;
+        this.courseNumber = courseNumber;
         this.studentRating = studentRating;
 
         }

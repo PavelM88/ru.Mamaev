@@ -14,7 +14,7 @@ public class AveregeRating {
     public AveregeRating() {
     }
 
-    void AveregeMarkInfo() {
+    void averegeMarkInfo() {
         double averegeMark =(double) (matematica + fizika + ekonomika) / 3;
         System.out.println("Средняя оценка " + averegeMark);
 
