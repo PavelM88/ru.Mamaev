@@ -13,9 +13,11 @@ public enum DrinkList {
 
     }
     public int getPrice () {
+
         return price;
     }
     public String getCurrency () {
+
         return currency;
     }
 }
