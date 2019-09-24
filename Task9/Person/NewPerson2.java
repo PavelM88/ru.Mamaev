@@ -1,7 +1,6 @@
 package Task9.Person;
 
 public class NewPerson2 extends PersonClass {
-    String name;
     private NewPerson2() {
 
     }
@@ -15,4 +14,5 @@ public class NewPerson2 extends PersonClass {
         person2.toRunInfo();
 
     }
+
 }
