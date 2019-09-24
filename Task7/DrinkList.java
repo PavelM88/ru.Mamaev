@@ -12,6 +12,7 @@ public enum DrinkList {
         this.currency = currency;
 
     }
+
     public int getPrice () {
 
         return price;
