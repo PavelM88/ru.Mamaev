@@ -7,9 +7,10 @@ public class Mama {
         Child child = new Child();
         try {
             child.likeFood();
+            System.out.println("Спасибо, мама.");
         }
-        finally {
-            System.out.println("......");
+        catch (Child.FoodIsNotTastyException f) {
+            System.out.println(f.getMessage());
         }
     }
 }

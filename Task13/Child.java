@@ -6,14 +6,14 @@ public class Child {
 
     private Food menu;
 
-    public void likeFood() throws FoodIsNotTastyException {
+    void likeFood() throws FoodIsNotTastyException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Что будем кушать: ");
         String food1 = scanner.next();
-        if (food1.equalsIgnoreCase(menu.getName())) {
+        if (Food.isAllowedName(food1)) {
             System.out.println("Съел " + food1 + " за обе щёки.");
         } else {
-            throw new FoodIsNotTastyException("Спасибо, мама");
+            throw new FoodIsNotTastyException("Спасибо, мама.");
         }
     }
 

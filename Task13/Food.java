@@ -15,4 +15,12 @@ public enum Food {
     public String getName() {
         return name;
     }
+    public static boolean isAllowedName(String name) {
+        for (Food food : Food.values()) {
+            if (food.getName().equalsIgnoreCase(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
