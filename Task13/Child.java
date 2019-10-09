@@ -2,9 +2,7 @@ package Task13;
 
 import java.util.Scanner;
 
-public class Child {
-
-    private Food menu;
+class Child {
 
     void likeFood() throws FoodIsNotTastyException {
         Scanner scanner = new Scanner(System.in);
