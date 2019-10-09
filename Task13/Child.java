@@ -16,10 +16,4 @@ public class Child {
             throw new FoodIsNotTastyException("Спасибо, мама.");
         }
     }
-
-    static class FoodIsNotTastyException extends Exception {
-        FoodIsNotTastyException(String message) {
-            super(message);
-        }
-    }
 }
