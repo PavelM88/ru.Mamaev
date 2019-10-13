@@ -3,7 +3,7 @@ package Task7;
 import java.util.Scanner;
 
 
-public class VendingMachine {
+ class VendingMachine {
     public static void main(String[] args) {
         System.out.println("     *** Меню ***");
         for (DrinkList drinkList : DrinkList.values()) {
