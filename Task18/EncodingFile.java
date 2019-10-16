@@ -13,6 +13,7 @@ class EncodingFile {
                 writer.write(a);
             }
         }
-
+        BufferedReader reader = new BufferedReader(new FileReader("Test/Textinput.txt"));
+        System.out.println(reader.readLine());
     }
 }
