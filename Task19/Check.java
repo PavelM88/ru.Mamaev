@@ -8,17 +8,20 @@ class Check {
     void printCheck() throws IOException {
             File file = new File("C:\\Users\\paxat\\IdeaProjects\\ru.Mamaev\\src\\Task19\\check");
             Scanner input = new Scanner(file);
+            Float sum = 0f;
             while (input.hasNext()) {
                 String line = input.nextLine();
                 Float f = input.nextFloat();
                 Float f1 = input.nextFloat();
                 Float f2 = f1 * f;
+                sum += f2;
                 System.out.printf("%-16s %8.2f x %7.3f  =%10.2f\n", line, f1, f, f2);
                 if (input.hasNext())
                 input.nextLine();
             }
             System.out.println("================================================");
-            System.out.print("Итого: ");
+            String string = "Итого:";
+        System.out.printf("%s %41.2f", string, sum);
             input.close();
     }
 
