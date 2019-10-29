@@ -1,35 +1,31 @@
 package Task20;
 
 
-import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class JsonSerialization {
+class JsonSerialization {
+    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
     void catFact() {
-       try {
-           URL url = new URL("https://cat-fact.herokuapp.com/facts/random");
-           try (InputStream is = url.openStream();
-                Reader reader = new InputStreamReader(is);
-                BufferedReader br = new BufferedReader(reader)){
-                String line;
-                while ((line = br.readLine()) != null){
-                    ObjectMapper om = new ObjectMapper();
-                    System.out.println(line);
-                    //om.writeValue(new File("CatFact.json"),line);
-                    String json = "{\"used\":false,\"source\":\"api\",\"type\":\"cat\",\"deleted\":false,\"_id\":\"591f98c5d1f17a153828aa0b\",\"__v\":0,\"text\"}";
-                    CatFacts cat = om.readValue(json, CatFacts.class);
-                    System.out.println(cat.getText());
-                }
-           } catch (IOException ex) {
+        try {
+            URL url = new URL("https://cat-fact.herokuapp.com/facts/random");
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()))){
+                CatFacts catFacts = OBJECT_MAPPER.readValue(br, CatFacts.class);
+                System.out.println(catFacts.getUpdatedAt());
+                System.out.println(catFacts.getText());
+                String json = OBJECT_MAPPER.writeValueAsString(catFacts);
+                System.out.println(json);
 
-           }
-       } catch (MalformedURLException e) {
-
-       }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (MalformedURLException ex) {
+                ex.printStackTrace();
+        }
     }
 }
