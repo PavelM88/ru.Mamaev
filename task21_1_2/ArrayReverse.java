@@ -1,4 +1,5 @@
-package Task21_1_2;
+package task21_1_2;
+
 
 public class ArrayReverse {
     public static void main(String[] args) {
@@ -12,8 +13,13 @@ public class ArrayReverse {
 
     private static void revers(int[] mas) {
         System.out.println("Реверс массива:");
-        for (int j = 8; j >=0; j--){
-            System.out.print(mas[j] + " ");
+        for (int i = 0; i < mas.length/2; i++){
+            int temp = mas[i];
+            mas[i] = mas[(mas.length - 1) - i];
+            mas[(mas.length - 1) - i] = temp;
+        }
+        for (int i: mas) {
+            System.out.print(i + " ");
         }
     }
 }
