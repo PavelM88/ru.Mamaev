@@ -6,30 +6,30 @@ import java.util.Map;
 
 public class FilterMap {
     public static void main(String[] args) {
-        Map<String, String> filter = person1();
-        isUnique(filter);
-        Map<String, String> filter1 = person2();
-        isUnique(filter1);
+        Map<String, String> getPerson = generateMap();
+        isUnique(getPerson);
+        Map<String, String> getPerson2 = generateMap2();
+        isUnique(getPerson2);
     }
 
-    private static Map<String, String> person1() {
-        Map<String, String> filter = new HashMap<>();
-        filter.put("Вася", "Иванов");
-        filter.put("Петр", "Петров");
-        filter.put("Виктор", "Сидоров");
-        filter.put("Сергей", "Савельев");
-        filter.put("Вадим", "Викторов");
-        return filter;
+    private static Map<String, String> generateMap() {
+        Map<String, String> personMap = new HashMap<>();
+        personMap.put("Вася", "Иванов");
+        personMap.put("Петр", "Петров");
+        personMap.put("Виктор", "Сидоров");
+        personMap.put("Сергей", "Савельев");
+        personMap.put("Вадим", "Викторов");
+        return personMap;
     }
 
-    private static Map<String, String> person2() {
-        Map<String, String> filter1 = new HashMap<>();
-        filter1.put("Вася", "Иванов");
-        filter1.put("Петр", "Петров");
-        filter1.put("Виктор", "Иванов");
-        filter1.put("Сергей", "Петров");
-        filter1.put("Вадим", "Викторов");
-        return filter1;
+    private static Map<String, String> generateMap2() {
+        Map<String, String> personMap2 = new HashMap<>();
+        personMap2.put("Вася", "Иванов");
+        personMap2.put("Петр", "Петров");
+        personMap2.put("Виктор", "Иванов");
+        personMap2.put("Сергей", "Петров");
+        personMap2.put("Вадим", "Викторов");
+        return personMap2;
     }
 
 
