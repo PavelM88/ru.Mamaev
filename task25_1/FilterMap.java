@@ -6,10 +6,10 @@ import java.util.Map;
 
 public class FilterMap {
     public static void main(String[] args) {
-        Map<String, String> getPerson = generateMap();
-        isUnique(getPerson);
-        Map<String, String> getPerson2 = generateMap2();
-        isUnique(getPerson2);
+        Map<String, String> personMap = generateMap();
+        isUnique(personMap);
+        Map<String, String> personMap2 = generateMap2();
+        isUnique(personMap2);
     }
 
     private static Map<String, String> generateMap() {
