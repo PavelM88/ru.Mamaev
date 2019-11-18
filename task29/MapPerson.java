@@ -35,11 +35,10 @@ public class MapPerson {
     private static void removeTheDuplicates(Map<String, Person> map) {
         HashMap<String, Person> copy = new HashMap<>(map);
         for (Map.Entry<String, Person> entry : copy.entrySet()) {
-            int replay = Collections.frequency(copy.values(), entry.getValue());
-            if (replay > 1) {
+            int count = Collections.frequency(copy.values(), entry.getValue());
+            if (count > 1) {
                 removeItemFromMapByValue(map, entry.getValue());
             }
-            break;
         }
         System.out.println(map);
     }

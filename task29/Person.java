@@ -12,8 +12,22 @@ public class Person {
         this.gender = gender;
     }
 
+    @Override
     public String toString() {
         return getSurname() + " : " + getAge() + " : " + getGender();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.getSurname().hashCode();
     }
 
     private int getAge() {
