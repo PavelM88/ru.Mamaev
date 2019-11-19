@@ -1,6 +1,8 @@
 package task29;
 
 
+import java.util.Objects;
+
 public class Person {
     private int age;
     private String surname;
@@ -18,16 +20,18 @@ public class Person {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age &&
+                Objects.equals(surname, person.surname) &&
+                Objects.equals(gender, person.gender);
     }
 
     @Override
     public int hashCode() {
-        return this.getSurname().hashCode();
+        return Objects.hash(age, surname, gender);
     }
 
     private int getAge() {

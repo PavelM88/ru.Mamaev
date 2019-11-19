@@ -5,8 +5,11 @@ import java.util.*;
 
 public class MapPerson {
     public static void main(String[] args) {
-        showMap(createMap());
-        removeTheDuplicates(createMap());
+        Map<String, Person> map = createMap();
+        showMap(map);
+        removeTheDuplicates(map);
+        System.out.println();
+        showMap(map);
     }
 
     private static Map<String, Person> createMap() {
@@ -38,9 +41,9 @@ public class MapPerson {
             int count = Collections.frequency(copy.values(), entry.getValue());
             if (count > 1) {
                 removeItemFromMapByValue(map, entry.getValue());
+                map.put(entry.getKey(), entry.getValue());
             }
         }
-        System.out.println(map);
     }
 
     private static void showMap(Map<String, Person> map) {
