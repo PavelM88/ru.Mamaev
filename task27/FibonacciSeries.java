@@ -4,7 +4,6 @@ public class FibonacciSeries {
     public static void main(String[] args) {
         iterationFibonacci(10);
         info(10);
-        System.out.println(counter);
     }
 
     private static void info(int num) {
@@ -24,9 +23,8 @@ public class FibonacciSeries {
         }
         System.out.println();
     }
-    private static int counter;
+
     private static int recursionFibonacci(int num) {
-        counter++;
         if ((num == 1) || (num == 0)) {
             return num;
         }
