@@ -38,7 +38,7 @@ public class MapPerson {
     private static void removeTheDuplicates(Map<String, Person> map) {
         HashMap<String, Person> copy = new HashMap<>(map);
         for (Map.Entry<String, Person> entry : copy.entrySet()) {
-            int count = Collections.frequency(copy.values(), entry.getValue());
+            int count = Collections.frequency(map.values(), entry.getValue());
             if (count > 1) {
                 removeItemFromMapByValue(map, entry.getValue());
                 map.put(entry.getKey(), entry.getValue());
