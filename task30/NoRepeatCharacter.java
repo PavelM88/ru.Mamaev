@@ -7,13 +7,7 @@ public class NoRepeatCharacter {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите слово: ");
         String word = scanner.nextLine();
-        getFirstUniqueChar(word);
-        readFirstNonRepeatingChar(word);
-    }
-
-    private static void readFirstNonRepeatingChar(String s) {
-        System.out.print("Первый неповторяющийся символ: ");
-        System.out.println(getFirstUniqueChar(s));
+        System.out.print("Первый неповторяющийся символ: " + getFirstUniqueChar(word));
     }
 
 
